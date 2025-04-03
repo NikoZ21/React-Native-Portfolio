@@ -1,7 +1,11 @@
-import { TextInput, View, StyleSheet, Alert } from "react-native";
+import { TextInput, View, StyleSheet, Alert, Text } from "react-native";
 import { useState } from "react";
+
 import PrimaryButton from "../components/ui/PrimaryButton";
 import Colors from "../constants/Colors";
+import Title from "../components/ui/Title";
+import Card from "../components/ui/Card";
+import InstructionText from "../components/ui/InstructionText";
 
 export default function StartGameScreen({ onNumberPick }) {
   const [inputNumber, setInputNumber] = useState("");
@@ -37,47 +41,49 @@ export default function StartGameScreen({ onNumberPick }) {
   }
 
   return (
-    <View style={styles.inputContainer}>
-      <TextInput
-        style={styles.input}
-        maxLength={2}
-        keyboardType="number-pad"
-        onChangeText={setInputNumberHandler}
-        value={inputNumber}
-      />
-      <View style={styles.buttonsContainer}>
-        <View style={styles.button}>
-          <PrimaryButton onPress={confirmInputNumberHandler}>
-            Comfirm
-          </PrimaryButton>
+    <View style={styles.rootContainer}>
+      <Title>Guess My Number</Title>
+      <Card style={styles.inputContainer}>
+        <InstructionText>Enter A Number</InstructionText>
+        <TextInput
+          style={styles.input}
+          maxLength={2}
+          keyboardType="number-pad"
+          onChangeText={setInputNumberHandler}
+          value={inputNumber}
+        />
+        <View style={styles.buttonsContainer}>
+          <View style={styles.button}>
+            <PrimaryButton onPress={confirmInputNumberHandler}>
+              Comfirm
+            </PrimaryButton>
+          </View>
+          <View style={styles.button}>
+            <PrimaryButton onPress={resetInputNumberHandler}>
+              Reset
+            </PrimaryButton>
+          </View>
         </View>
-        <View style={styles.button}>
-          <PrimaryButton onPress={resetInputNumberHandler}>Reset</PrimaryButton>
-        </View>
-      </View>
+      </Card>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  inputContainer: {
+  rootContainer: {
+    flex: 1,
+    marginTop: 64,
     alignItems: "center",
-    marginTop: 100,
-    marginHorizontal: 30,
-    padding: 16,
-    borderRadius: 6,
-    backgroundColor: Colors.primary700,
-    elevation: 8,
   },
-
   input: {
     borderBottomWidth: 2,
     borderColor: Colors.accent500,
     marginVertical: 10,
-    width: "20%",
+    width: 65,
     color: Colors.accent500,
     fontWeight: "bold",
     fontSize: 32,
+    textAlign: "center",
   },
   buttonsContainer: {
     flexDirection: "row",
