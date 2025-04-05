@@ -1,7 +1,7 @@
 const Colors = {
-  primary500: "#72063c",
-  primary600: "#640233",
-  primary700: "#4e0329",
+  primary500: "#064e72",
+  primary600: "#024064",
+  primary700: "#02334e",
   accent500: "#ddb52f",
 };
 

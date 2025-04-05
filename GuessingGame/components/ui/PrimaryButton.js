@@ -33,6 +33,8 @@ const styles = StyleSheet.create({
   buttonText: {
     color: "white",
     textAlign: "center",
+    fontFamily: "lilita-one",
+    fontSize: 20,
   },
   pressed: {
     opacity: 0.75,

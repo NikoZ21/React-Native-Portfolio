@@ -42,7 +42,7 @@ export default function StartGameScreen({ onNumberPick }) {
 
   return (
     <View style={styles.rootContainer}>
-      <Title>Guess My Number</Title>
+      <Title style={styles.title}>Guess My Number</Title>
       <Card style={styles.inputContainer}>
         <InstructionText>Enter A Number</InstructionText>
         <TextInput
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     width: 65,
     color: Colors.accent500,
-    fontWeight: "bold",
+    fontFamily: "lilita-one",
     fontSize: 32,
     textAlign: "center",
   },
@@ -90,5 +90,8 @@ const styles = StyleSheet.create({
   },
   button: {
     flex: 1,
+  },
+  title: {
+    padding: 15,
   },
 });
