@@ -3,6 +3,7 @@ import { Ionicons } from "@expo/vector-icons";
 
 import SearchTaskInput from "../components/SearchTaskInput";
 import TaskListItem from "../components/TaskListItem";
+import Task from "../components/task/Task";
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
         </View>
         <SearchTaskInput />
       </View>
-      <TaskListItem />
+      <Task />
     </View>
   );
 }

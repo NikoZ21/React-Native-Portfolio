@@ -1,7 +1,7 @@
 import { View, StyleSheet, Text } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-export default function TaskListItem({ title = "Title" }) {
+export default function TaskListItem({ title = "Workout", timer = "25:00" }) {
   return (
     <View style={styles.container}>
       <View style={styles.leftSide}>
@@ -27,7 +27,12 @@ export default function TaskListItem({ title = "Title" }) {
         </View>
       </View>
       <View style={styles.rightSide}>
-        <View></View>
+        <View>
+          <View style={styles.timerDisplay}>
+            <Text style={styles.timerText}>{timer}</Text>
+          </View>
+          <View></View>
+        </View>
       </View>
     </View>
   );
@@ -41,11 +46,11 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingVertical: 2,
-    paddingHorizontal: 8,
+    paddingVertical: 10,
+    paddingHorizontal: 15,
   },
   leftSide: {
-    //backgroundColor: "blue",
+    // backgroundColor: "blue",
     justifyContent: "center",
     alignItems: "center",
   },
@@ -79,6 +84,20 @@ const styles = StyleSheet.create({
   },
 
   rightSide: {
-    backgroundColor: "red",
+    //backgroundColor: "red",
+  },
+
+  timerDisplay: {
+    width: 50,
+    height: 20,
+    backgroundColor: "rgba(255, 255, 255, 0.29)",
+    justifyContent: "center",
+    borderRadius: 2,
+  },
+  timerText: {
+    textAlign: "center",
+    color: "white",
+    fontSize: 12,
+    fontWeight: "500",
   },
 });
