@@ -5,14 +5,8 @@ export default function Page() {
   return (
     <View style={styles.container}>
       <View style={styles.main}>
-        <Link href="/tasks/1">Go to user 1</Link>
-        <Pressable
-          onPress={() =>
-            router.push({ pathname: "/tasks/[id]", params: { id: 2 } })
-          }
-        >
-          <Text>Go to user 2</Text>
-        </Pressable>
+        <Text>This is Index.tsx</Text>
+        <Link href="settings">Go to settings</Link>
       </View>
     </View>
   );
