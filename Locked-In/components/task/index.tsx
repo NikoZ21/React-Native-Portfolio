@@ -1,10 +1,10 @@
 import { View, StyleSheet, Text } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-import TaskTimer from "./TaskTimer";
-import TaskTitle from "./TaskTitle";
-import TaskDate from "./TaskDate";
-import TaskButton from "./TaskButton";
+import TaskTimer from "./Timer";
+import TaskTitle from "./Title";
+import TaskDate from "./Date";
+import TaskButton from "./Button";
 
 export default function Task({ title = "Workout", timer = "25:00" }) {
   return (
@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     paddingVertical: 10,
     paddingHorizontal: 15,
+    marginBottom: 11,
   },
   leftSide: {
     // backgroundColor: "blue",

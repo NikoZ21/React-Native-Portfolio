@@ -2,8 +2,8 @@ import { View, StyleSheet, Text, Image } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 import SearchTaskInput from "../components/SearchTaskInput";
-import TaskListItem from "../components/TaskListItem";
-import Task from "../components/task/Task";
+import TasksList from "../components/tasks-list";
+import Task from "../components/task";
 
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
         </View>
         <SearchTaskInput />
       </View>
-      <Task />
+      <TasksList />
     </View>
   );
 }

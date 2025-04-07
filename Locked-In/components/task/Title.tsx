@@ -1,7 +1,7 @@
 import { View, StyleSheet, Text } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-export default function TaskTitle({ title = "Workout" }) {
+export default function Title({ title = "Workout" }) {
   return (
     <View style={styles.root}>
       <Ionicons

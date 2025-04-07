@@ -1,7 +1,7 @@
 import { View, StyleSheet, Text } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-export default function TaskDate() {
+export default function Date() {
   return (
     <View style={styles.clock}>
       <Ionicons

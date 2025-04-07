@@ -7,7 +7,7 @@ type Props = {
   onPress?: () => void;
 };
 
-export default function TaskButton({ children, onPress }: Props) {
+export default function Button({ children, onPress }: Props) {
   return (
     <LinearGradient
       colors={["#0C2C0D", "#10360B"]}

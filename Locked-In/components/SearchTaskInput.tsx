@@ -14,7 +14,7 @@ export default function SearchTaskInput() {
       <Ionicons
         name="chevron-expand-outline"
         size={20}
-        color="#888"
+        color="white"
         style={styles.iconRight}
       />
     </View>
@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
     height: 40,
     paddingRight: 18,
     paddingLeft: 18,
+    borderRadius: 8,
   },
   iconLeft: {
     marginRight: 8,

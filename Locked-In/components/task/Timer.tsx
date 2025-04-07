@@ -1,6 +1,6 @@
 import { View, StyleSheet, Text } from "react-native";
 
-export default function TaskTimer({ timer = "25:00" }) {
+export default function Timer({ timer = "25:00" }) {
   return (
     <View style={styles.timer}>
       <Text style={styles.text}>{timer}</Text>
