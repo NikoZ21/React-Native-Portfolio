@@ -3,7 +3,6 @@ import { Ionicons } from "@expo/vector-icons";
 
 import SearchTaskInput from "../components/SearchTaskInput";
 import TasksList from "../components/tasks-list";
-import Task from "../components/task";
 
 export default function Home() {
   return (

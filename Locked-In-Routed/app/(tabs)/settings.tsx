@@ -5,6 +5,7 @@ export default function Settings() {
   return (
     <View style={styles.container}>
       <View style={styles.main}>
+        <Text>This is Settings Page</Text>
         <Link href="profile">Go to profile</Link>
         <Button title="Back" onPress={() => router.back()} />
       </View>
