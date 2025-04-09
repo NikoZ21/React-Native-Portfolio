@@ -1,7 +1,6 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, Dimensions } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { Dimensions } from "react-native";
 
 export default function TasksHeader() {
   const { width, height } = Dimensions.get("window");

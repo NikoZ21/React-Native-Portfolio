@@ -1,8 +1,9 @@
-import { View, StyleSheet, Text, Image } from "react-native";
+import { StyleSheet } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
 import TasksHeader from "../../components/TasksHeader";
 import SearchTaskInput from "../../components/SearchTaskInput";
+import TasksList from "../../components/tasks-list";
 
 export default function Tasks() {
   return (
@@ -12,6 +13,7 @@ export default function Tasks() {
     >
       <TasksHeader />
       <SearchTaskInput />
+      <TasksList />
     </LinearGradient>
   );
 }

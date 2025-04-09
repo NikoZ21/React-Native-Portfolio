@@ -1,13 +1,41 @@
-import { StyleSheet, Text, View } from "react-native";
-import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { Drawer } from "expo-router/drawer";
+import {
+  StyleSheet,
+  StatusBar,
+  Dimensions,
+  useWindowDimensions,
+} from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Slot, Tabs } from "expo-router";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 import { createTab } from "../../utils/TabFactory";
-import { LinearGradient } from "expo-linear-gradient";
 
 export default function Layout() {
+  const windowDimenstions = useSafeAreaInsets();
+  //windowDimenstions.bottom = 66;
+  console.log((windowDimenstions.bottom = 0));
+
+  // const window = Dimensions.get("window");
+
+  // console.log(
+  //   "Width of the window: " +
+  //     window.width +
+  //     " Height of the window: " +
+  //     window.height
+  // );
+
+  // const screen = Dimensions.get("screen");
+
+  // console.log(
+  //   "Width of the screen: " +
+  //     screen.width +
+  //     " Height of the screen: " +
+  //     screen.height
+  // );
+
   return (
+    // <>
+    //   <StatusBar barStyle="light-content" backgroundColor="#1B1B1B" />
     <Tabs
       screenOptions={{
         headerShown: false,
@@ -19,6 +47,7 @@ export default function Layout() {
       {createTab("profile", "Profile", "person-outline")}
       {createTab("settings", "Settings", "settings-outline")}
     </Tabs>
+    // </>
   );
 }
 
