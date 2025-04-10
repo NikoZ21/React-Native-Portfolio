@@ -6,7 +6,7 @@ import TaskTitle from "./Title";
 import TaskDate from "./Date";
 import TaskButton from "./Button";
 
-export default function Task({ title = "Workout", timer = "25:00" }) {
+export default function Task({ title = "Workout Online", timer = "25:00" }) {
   return (
     <View style={styles.container}>
       <View style={styles.leftSide}>
@@ -39,13 +39,11 @@ const styles = StyleSheet.create({
     marginBottom: 11,
   },
   leftSide: {
-    //backgroundColor: "blue",
     justifyContent: "center",
     alignItems: "center",
   },
 
   rightSide: {
-    //backgroundColor: "red",
     alignItems: "flex-end",
   },
 });

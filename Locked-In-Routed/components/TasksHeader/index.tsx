@@ -3,10 +3,6 @@ import { View, Text, StyleSheet, Image, Dimensions } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 export default function TasksHeader() {
-  const { width, height } = Dimensions.get("window");
-
-  console.log(width, height);
-
   return (
     <View style={styles.headerContainer}>
       <Text style={styles.titleText}>Happy Working</Text>

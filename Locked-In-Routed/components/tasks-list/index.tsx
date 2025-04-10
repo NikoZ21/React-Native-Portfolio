@@ -1,46 +1,30 @@
-import { LinearGradient } from "expo-linear-gradient";
-import { View, StyleSheet, ScrollView } from "react-native";
+import { View, StyleSheet, FlatList } from "react-native";
 
 import TaskActionsMenu from "./tasksListActionsMenu";
 import Task from "../Task";
-import CreateNewButton from "./CreateNewButton";
+
+const tasks = [
+  { key: 1, title: "Workout", timer: "20:00" },
+  { key: 2, title: "Eat", timer: "25:00" },
+  { key: 3, title: "Shower", timer: "30:00" },
+  { key: 4, title: "Meditate", timer: "05:00" },
+  { key: 5, title: "Make a list of goals", timer: "10:00" },
+  { key: 6, title: "Take a power nap", timer: "49:00" },
+  { key: 7, title: "Brainstorm", timer: "13:00" },
+  { key: 8, title: "Sleep", timer: "60:00" },
+];
 
 export default function TasksList() {
   return (
     <View style={styles.container}>
       <TaskActionsMenu />
-      <View style={[styles.tasksList, { overflow: "hidden" }]}>
-        <ScrollView style={{ height: 500, backgroundColor: "red" }}>
-          <Task />
-          <Task />
-          <Task />
-          <Task />
-          <Task />
-          <Task />
-          <Task />
-          <Task />
-          <Task />
-          <Task />
-          <Task />
-          <Task />
-          <Task />
-          <Task />
-          <Task />
-          <Task />
-        </ScrollView>
-      </View>
-      <View style={styles.fixedBottom}>
-        <LinearGradient
-          colors={["#1B1B1B", "#FFFFFF", "#1B1B1B"]}
-          start={{ x: 0, y: 0 }}
-          end={{ x: 1, y: 0 }}
-          style={{
-            height: 2,
-            width: "100%",
-            marginVertical: 20,
-          }}
+      <View style={[styles.tasksList]}>
+        <FlatList
+          data={tasks}
+          renderItem={(item) => (
+            <Task title={item.item.title} timer={item.item.timer} />
+          )}
         />
-        <CreateNewButton />
       </View>
     </View>
   );
@@ -53,14 +37,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     width: "90%",
-    //backgroundColor: "green",
   },
   fixedBottom: {
     position: "absolute",
     bottom: 0,
     width: "100%",
     alignItems: "center",
-    //paddingBottom: 16,
     backgroundColor: "transparent",
   },
   tasksList: {

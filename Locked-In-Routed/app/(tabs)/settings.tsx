@@ -1,14 +1,9 @@
-import { Link, router } from "expo-router";
-import { Text, View, Button, StyleSheet } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
 
 export default function Settings() {
   return (
     <View style={styles.container}>
-      <View style={styles.main}>
-        <Text>This is Settings Page</Text>
-        <Link href="profile">Go to profile</Link>
-        <Button title="Back" onPress={() => router.back()} />
-      </View>
+      <Text>This is Settings Page</Text>
     </View>
   );
 }
@@ -16,20 +11,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    padding: 24,
-  },
-  main: {
-    flex: 1,
     justifyContent: "center",
-    maxWidth: 960,
-    marginHorizontal: "auto",
-  },
-  title: {
-    fontSize: 64,
-    fontWeight: "bold",
-  },
-  subtitle: {
-    fontSize: 36,
-    color: "#38434D",
   },
 });

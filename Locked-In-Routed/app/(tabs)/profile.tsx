@@ -1,16 +1,16 @@
-import { router } from "expo-router";
-import { Text, Button, View } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
 
 export default function Profile() {
   return (
-    <View>
-      <Text>This is profile page</Text>
-      <Button
-        title="Back"
-        onPress={() => {
-          router.back();
-        }}
-      />
+    <View style={styles.container}>
+      <Text>This is Profile Page</Text>
     </View>
   );
 }
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});

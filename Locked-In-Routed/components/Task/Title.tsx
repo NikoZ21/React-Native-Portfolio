@@ -1,7 +1,7 @@
 import { View, StyleSheet, Text } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-export default function Title({ title = "Workout" }) {
+export default function Title({ title = "Workout Online" }) {
   return (
     <View style={styles.root}>
       <Ionicons
@@ -19,8 +19,6 @@ const styles = StyleSheet.create({
   root: {
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between",
-    width: 200,
   },
   icon: {},
   title: {
@@ -28,7 +26,6 @@ const styles = StyleSheet.create({
     fontFamily: "Roboto",
     fontWeight: "500",
     fontSize: 15,
-    width: 176,
-    //backgroundColor: "black",
+    marginLeft: 5,
   },
 });

@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { StyleSheet, Text, View, Pressable } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { router } from "expo-router";
 
 type Props = {
   children?: ReactNode;
@@ -19,8 +20,7 @@ export default function Button({ children, onPress }: Props) {
             ? [styles.buttonInnerContainer, styles.pressed]
             : styles.buttonInnerContainer
         }
-        onPress={onPress}
-        // android_ripple={{ color:  }}
+        onPress={() => router.navigate("../task/1")}
       >
         <View style={styles.contentContainer}>{children}</View>
       </Pressable>

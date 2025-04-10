@@ -1,10 +1,10 @@
-import { TouchableOpacity, Text, StyleSheet } from "react-native";
+import { Text, StyleSheet, Pressable } from "react-native";
 
 export default function CreateNewButton() {
   return (
-    <TouchableOpacity style={styles.button}>
+    <Pressable style={styles.button}>
       <Text style={styles.text}>Create New</Text>
-    </TouchableOpacity>
+    </Pressable>
   );
 }
 
@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#4CAF50",
+
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 8,
