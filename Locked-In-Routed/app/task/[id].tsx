@@ -1,5 +1,7 @@
 import { useLocalSearchParams } from "expo-router";
-import { View, Text } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+
+import SelectedTask from "../../components/SelectedTask";
 
 export default function Task() {
   const tasks = [
@@ -18,9 +20,15 @@ export default function Task() {
   const task = tasks[index];
 
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Title of the task : {task.title}</Text>
-      <Text>Time of the task : {task.timer}</Text>
-    </View>
+    <LinearGradient
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+      colors={["#193117", "#1E1E1E"]}
+    >
+      <SelectedTask />
+    </LinearGradient>
   );
 }

@@ -22,7 +22,7 @@ export default function Tab({ name, title }: Props) {
           <Ionicons
             name="home-outline"
             size={19}
-            color={focused ? "#4CAF50" : "white"}
+            color={focused ? "#4CAF50" : "#ffffff"}
           />
         ),
       }}
