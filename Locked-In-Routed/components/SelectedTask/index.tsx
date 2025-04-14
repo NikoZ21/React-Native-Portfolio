@@ -1,14 +1,17 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import Timer from "./Timer";
+
 import Header from "./Header";
 import Task from "../Task";
+import Timer from "./Timer";
+import TaskTypeIndicator from "./TaskTypeIndicator";
 
 export default function SelectedTask() {
   return (
-    <View style={styles.root}>
+    <View style={styles.rootContainer}>
       <View style={styles.headerContainer}>
         <Header />
+        <TaskTypeIndicator />
       </View>
       <View style={styles.timerContainer}>
         <Timer />
@@ -21,7 +24,7 @@ export default function SelectedTask() {
 }
 
 const styles = StyleSheet.create({
-  root: {
+  rootContainer: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
@@ -30,19 +33,19 @@ const styles = StyleSheet.create({
 
   headerContainer: {
     flex: 1,
-    backgroundColor: "yellow",
+    // backgroundColor: "yellow",
     alignItems: "center",
     justifyContent: "center",
   },
   timerContainer: {
     flex: 4,
-    backgroundColor: "blue",
+    //backgroundColor: "blue",
     alignItems: "center",
     justifyContent: "center",
   },
   taskContainer: {
     flex: 1,
-    backgroundColor: "red",
+    //backgroundColor: "red",
     alignItems: "center",
     justifyContent: "center",
   },

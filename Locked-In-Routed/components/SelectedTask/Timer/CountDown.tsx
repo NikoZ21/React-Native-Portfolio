@@ -9,7 +9,7 @@ import Svg, {
   RadialGradient,
 } from "react-native-svg";
 
-const SIZE = 300;
+const SIZE = 250;
 const STROKE_WIDTH = 20;
 const RADIUS = (SIZE - STROKE_WIDTH) / 2;
 
