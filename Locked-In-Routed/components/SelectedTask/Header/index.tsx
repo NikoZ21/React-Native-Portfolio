@@ -2,16 +2,13 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import Status from "./Status";
 import BackButton from "./BackButton";
+import { typography } from "../../../theme/responsive";
 
 export default function Header() {
   return (
     <View style={styles.container}>
-      <BackButton
-        onPress={() => {
-          console.log("going back");
-        }}
-      />
-      <Text style={styles.title}>Task Start Now</Text>
+      <BackButton />
+      <Text style={styles.title}>You Are Locked-In</Text>
       <Status />
     </View>
   );
@@ -25,7 +22,7 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   title: {
-    fontSize: 24,
+    fontSize: typography.fontSize.xxl,
     fontWeight: "bold",
     color: "#ffffff",
     fontFamily: "Rubik",

@@ -2,22 +2,21 @@ import React from "react";
 import { View, StyleSheet } from "react-native";
 
 import Header from "./Header";
-import Task from "../Task";
 import Timer from "./Timer";
-import TaskTypeIndicator from "./TaskTypeIndicator";
+import OnGoingTaskCard from "./OnGoingTaskCard";
+import { scaleHeight } from "../../theme/responsive";
 
 export default function SelectedTask() {
   return (
     <View style={styles.rootContainer}>
       <View style={styles.headerContainer}>
         <Header />
-        <TaskTypeIndicator />
       </View>
       <View style={styles.timerContainer}>
         <Timer />
       </View>
       <View style={styles.taskContainer}>
-        <Task />
+        <OnGoingTaskCard />
       </View>
     </View>
   );
@@ -39,13 +38,14 @@ const styles = StyleSheet.create({
   },
   timerContainer: {
     flex: 4,
-    //backgroundColor: "blue",
+    // backgroundColor: "blue",
     alignItems: "center",
     justifyContent: "center",
   },
   taskContainer: {
-    flex: 1,
-    //backgroundColor: "red",
+    flex: 2,
+    // backgroundColor: "red",
+    width: "100%",
     alignItems: "center",
     justifyContent: "center",
   },

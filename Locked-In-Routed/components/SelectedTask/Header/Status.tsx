@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
+import { scaleHeight, scaleWidth, typography } from "../../../theme/responsive";
 
 export default function Status() {
   return (
@@ -15,12 +16,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderWidth: 1,
     borderColor: "#FD5B71",
-    borderRadius: 6,
-    paddingVertical: 5,
-    paddingHorizontal: 8,
+    borderRadius: scaleWidth(6),
+    paddingVertical: scaleHeight(5),
+    paddingHorizontal: scaleWidth(8),
   },
   text: {
-    fontSize: 12,
+    fontSize: typography.fontSize.sm,
     color: "#FD5B71",
     fontWeight: "500",
   },

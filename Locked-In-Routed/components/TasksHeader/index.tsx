@@ -11,7 +11,7 @@ export default function TasksHeader() {
         <View style={styles.imageContainer}>
           <Image
             style={styles.image}
-            source={require("../../assets/image/profile.jpg")}
+            source={require("../../assets/images/profile.jpg")}
           />
         </View>
       </View>

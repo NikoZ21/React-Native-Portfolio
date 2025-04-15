@@ -1,12 +1,12 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 
 import CountDown from "./CountDown";
 import Button from "./Button";
+import { scaleWidth, typography } from "../../../theme/responsive";
 
 export default function Timer() {
   return (
     <View style={styles.root}>
-      <View></View>
       <View>
         <CountDown />
       </View>
@@ -33,19 +33,13 @@ export default function Timer() {
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    justifyContent: "center",
+    justifyContent: "space-between",
     alignItems: "center",
-    // backgroundColor: "blue",
   },
   countDown: {},
   buttons: {
     flexDirection: "row",
     justifyContent: "space-between",
-    width: 200,
-    // backgroundColor: "red",
-  },
-  text: {
-    fontSize: 18,
-    color: "#333",
+    width: scaleWidth(230),
   },
 });

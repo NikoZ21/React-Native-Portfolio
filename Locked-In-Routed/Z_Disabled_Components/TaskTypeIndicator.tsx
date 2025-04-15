@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, Image } from "react-native";
 export default function TaskTypeIndicator({ title = "Workout" }) {
   return (
     <View style={styles.container}>
-      <Image source={require("../../assets/images/task-icon.png")} />
+      <Image source={require("../../../assets/images/task-icon.png")} />
       <Text style={styles.text}>{title}</Text>
     </View>
   );
