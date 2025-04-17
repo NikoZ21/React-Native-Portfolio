@@ -1,7 +1,7 @@
 import { useLocalSearchParams } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 
-import SelectedTask from "../../components/SelectedTask";
+import SelectedTask from "../../../components/SelectedTask";
 
 export default function Task() {
   const tasks = [

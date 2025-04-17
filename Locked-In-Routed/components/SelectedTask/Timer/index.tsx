@@ -7,7 +7,7 @@ import { scaleWidth, typography } from "../../../theme/responsive";
 export default function Timer() {
   return (
     <View style={styles.root}>
-      <View>
+      <View style={styles.countDown}>
         <CountDown />
       </View>
       <View style={styles.buttons}>
@@ -33,8 +33,9 @@ export default function Timer() {
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    justifyContent: "space-between",
+    justifyContent: "space-around",
     alignItems: "center",
+    // backgroundColor: "#1B1B1B",
   },
   countDown: {},
   buttons: {

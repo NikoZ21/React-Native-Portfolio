@@ -6,7 +6,7 @@ import { router } from "expo-router";
 
 export default function BackButton() {
   return (
-    <Pressable style={styles.button} onPress={() => router.navigate("tasks")}>
+    <Pressable style={styles.button} onPress={() => router.back()}>
       <Ionicons
         name="arrow-back-outline"
         size={typography.fontSize.xxl}

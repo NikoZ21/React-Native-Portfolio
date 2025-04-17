@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   title: {
-    fontSize: typography.fontSize.xxl,
+    fontSize: typography.fontSize.xl2,
     fontWeight: "bold",
     color: "#ffffff",
     fontFamily: "Rubik",

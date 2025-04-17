@@ -1,6 +1,6 @@
 import { View, StyleSheet, FlatList } from "react-native";
 
-import TaskActionsMenu from "./tasksListActionsMenu";
+import TaskActionsMenu from "./ActionsMenu";
 import Task from "../Task";
 
 const tasks = [

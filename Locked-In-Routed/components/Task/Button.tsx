@@ -12,7 +12,7 @@ export default function Button({ children, onPress }: Props) {
   return (
     <LinearGradient
       colors={["#0C2C0D", "#10360B"]}
-      style={styles.buttonOutterContainer}
+      style={styles.buttonOuterContainer}
     >
       <Pressable
         style={({ pressed }) =>
@@ -20,7 +20,7 @@ export default function Button({ children, onPress }: Props) {
             ? [styles.buttonInnerContainer, styles.pressed]
             : styles.buttonInnerContainer
         }
-        onPress={() => router.navigate("../task/1")}
+        onPress={() => router.navigate("../tasks/1")}
       >
         <View style={styles.contentContainer}>{children}</View>
       </Pressable>
@@ -29,7 +29,7 @@ export default function Button({ children, onPress }: Props) {
 }
 
 const styles = StyleSheet.create({
-  buttonOutterContainer: {
+  buttonOuterContainer: {
     borderRadius: 6,
     borderColor: "#164F18",
     borderWidth: 1,

@@ -1,10 +1,11 @@
 import { StyleSheet, View, Dimensions } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
-import TasksHeader from "../../components/TasksHeader";
-import SearchTaskInput from "../../components/SearchTaskInput";
-import TasksList from "../../components/tasks-list";
-import CreateNewButton from "../../components/tasks-list/CreateNewButton";
+import TasksHeader from "../../../components/TasksHeader";
+import SearchTaskInput from "../../../components/SearchTaskInput";
+import CreateNewButton from "../../../components/TasksList/CreateNewButton";
+import TasksList from "../../../components/TasksList";
+import NewTaskModal from "../../../components/NewTaskModal";
 
 export default function Tasks() {
   console.log(Dimensions.get("window").width);
@@ -15,6 +16,7 @@ export default function Tasks() {
       colors={["#193117", "#1E1E1E"]}
       style={styles.rootContainer}
     >
+      <NewTaskModal />
       <View style={styles.top}>
         <TasksHeader />
         <SearchTaskInput />

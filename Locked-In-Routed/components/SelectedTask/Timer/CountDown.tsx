@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, Dimensions } from "react-native";
+import { View, StyleSheet } from "react-native";
 import Svg, {
   Circle,
   LinearGradient,
@@ -8,10 +8,10 @@ import Svg, {
   Text as SvgText,
   RadialGradient,
 } from "react-native-svg";
-import { scaleHeight, scaleWidth, typography } from "../../../theme/responsive";
+import { scaleHeight, scaleWidth } from "../../../theme/responsive";
 
-const SIZE = scaleHeight(375);
-const STROKE_WIDTH = scaleWidth(25);
+const SIZE = scaleHeight(250);
+const STROKE_WIDTH = scaleWidth(20);
 const RADIUS = (SIZE - STROKE_WIDTH) / 2;
 
 export default function SelectedTask() {
@@ -60,7 +60,7 @@ export default function SelectedTask() {
           x={SIZE / 2}
           y={SIZE / 2 + 10}
           fill="white"
-          fontSize={scaleHeight(60)}
+          fontSize={scaleHeight(40)}
           fontWeight="bold"
           textAnchor="middle"
         >
